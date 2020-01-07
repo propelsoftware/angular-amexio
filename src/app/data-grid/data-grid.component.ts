@@ -1,17 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-data-grid',
+  templateUrl: './data-grid.component.html',
+  styleUrls: ['./data-grid.component.scss']
 })
-export class AppComponent {
-  title = 'angular-amexio';
-data:any;
+export class DataGridComponent implements OnInit {
+  data: any;
+  constructor() { }
+
   ngOnInit() {
     this.data = [
       {
-        "userId": "10",
+        "userId": "0",
         "jobTitle": "Program Direct",
         "firstName": "Tom",
         "lastName": "Hanks",
@@ -192,5 +193,6 @@ data:any;
 
   onRowSelect(data: any) {
     /* Do opertion on data */
-  }  
+  }
+
 }
