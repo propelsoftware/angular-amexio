@@ -1,0 +1,49 @@
+<amexio-row>
+  <amexio-column [size]="10">
+    <amexio-nav [enable-side-nav-position]="false" [logo]="'assets/images/plogo_small2.png'" (onNavLogoClick)="externalLink('http://amexio.tech')" 
+            >
+
+      <!-- Menu items -->
+      <amexio-nav-item position-left *ngFor="let menus of topMenuData" [type]="'menu'" [title]="menus.text" [data]="menus.submenus"
+        (onNavItemClick)="externalLink($event)">
+      </amexio-nav-item>
+
+            <!-- Home TODO  - not required
+              <amexio-nav-item position-left [type]="'link'" [title]="'Home'" (onNavItemClick)="externalLink('http://amexio.tech')">
+              </amexio-nav-item> -->
+      <!-- logout -->
+      <amexio-nav-item position-left [title]="'logout'" [type]="'link'" (onNavItemClick)="logout()" [icon]="'fa fa-sign-out'">
+      </amexio-nav-item>              
+      <!--Setting TODO-->
+      <amexio-nav-item position-right [title]="'Settings'" [type]="'menucontainer'" [icon]="'assets/images/settings.ico'">
+        <amexio-box background-color="theme-color" padding="false">
+          <amexio-label size="small-bold">This account is managed by</amexio-label>
+        </amexio-box>
+        <amexio-row>
+          <amexio-column size="5">
+            <amexio-image [height]="'89.75px'" [width]="'89.75px'" [c-class]="'image-round'" path="assets/images/plogo.png">
+            </amexio-image>
+          </amexio-column>
+          <amexio-column size="7">
+            <amexio-label>  </amexio-label>
+            <amexio-label> </amexio-label>
+          </amexio-column>
+        </amexio-row>
+        <amexio-drop-down-menu-item [label]="'Settings'" [icon]="'assets/images/plogo_GOx_icon.ico'" [separator]="true">
+        </amexio-drop-down-menu-item>
+        <amexio-drop-down-menu-item [label]="'Help Center'" [icon]="'fa fa-question-circle'" [separator]="true">
+        </amexio-drop-down-menu-item>
+        <amexio-drop-down-menu-item>
+          <amexio-button [label]="'My Account'" [type]="'theme-color'" [tooltip]="'My Account'">
+          </amexio-button>
+        </amexio-drop-down-menu-item>
+      </amexio-nav-item>
+      <!-- GLOBAL Search TODO-->
+      <!-- <amexio-nav-item position-left [type]="'textfield'" [title]="'Enter your name'" [(ngModel)]="uname">
+              </amexio-nav-item> -->
+      <!-- <amexio-nav-item position-left (onNavItemClick)="externalLink('http://amexio.tech')" [icon]="'favicon'"
+                [type]="'button'" style="cursor: pointer;">
+              </amexio-nav-item> -->
+    </amexio-nav>
+  </amexio-column>
+</amexio-row>
