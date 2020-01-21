@@ -1,4 +1,5 @@
-<amexio-row>
+<!-- Data Grid With Filter -->
+<!-- <amexio-row>
     <amexio-column size="12">
         <amexio-card [header]="true">
             <amexio-header>
@@ -19,6 +20,67 @@
             </amexio-body>
         </amexio-card>
     </amexio-column>
-</amexio-row>
+</amexio-row> -->
 
+<!-- Demo1 :- Simple Reactive Form-->
+<form [formGroup]="employeeForm">
+    <amexio-row>
+        <amexio-column size="6">
+            <amexio-text-input formControlName="FirstName" [field-label]="'First Name'" [allow-blank]="true"
+                [error-msg]="'Please enter valid First Name'" [enable-popover]="true"
+                [place-holder]="'Please enter first name'" [min-length]="2" [icon-feedback]="false"
+                [min-error-msg]="'Minimum 2 char allowed'" [max-error-msg]="'Maximum 20 char allowed'"
+                [max-length]="20">
+            </amexio-text-input>
+        </amexio-column>
+        <amexio-column size="6">
+            <amexio-text-input formControlName="LastName" [field-label]="'Last Name'"
+                [place-holder]="'Please enter last name'" [allow-blank]="true" [error-msg]="'errorMsg'"
+                [enable-popover]="true" [min-length]="2" [min-error-msg]="'Minimum 2 char allowed'"
+                [max-error-msg]="'Maximum 20 char allowed'" [max-length]="20">
+                [icon-feedback]="true" >
+            </amexio-text-input>
+        </amexio-column>
+    </amexio-row>
+    <amexio-row>
+        <amexio-column size="6">
+            <amexio-email-input formControlName="Email" [field-label]="'Email Id'"
+                [place-holder]="'Please enter Email Id'" [allow-blank]="false" [error-msg]="'Please Enter Email Id'"
+                [enable-popover]="true" [icon-feedback]="true">
+            </amexio-email-input>
+        </amexio-column>
+        <amexio-column size="6">
+            <!-- <amexio-number-input formControlName="Age" [enable-popover]="true" [field-label]="'Age'" [place-holder]="'Enter age'" [error-msg]="'Please enter age'" [min-value]="18" [min-error-msg]="'age can not be less than 18'" [max-value]="100" [max-error-msg]="'age can not be greater than 100'"
+                [icon-feedback]="true">
+            </amexio-number-input> -->
+            <amexio-text-input [pattern]="'\(\d{3}\)\s\d{3}-\d{4}'" [place-holder]="'(XXX) XXX-XXXX'"
+                [amexio-mask-pattern]="'(XXX) XXX-XXXX'" [field-label]="'Age'" formControlName="Age"
+                [allow-blank]="true">
+            </amexio-text-input>
+            
+        </amexio-column>
+    </amexio-row>
+
+    <amexio-row>
+        <amexio-column size="6">
+            <amexio-radio-group formControlName="Gender" [field-label]="'Gender'" [horizontal]="true"
+                [display-field]="'genderName'" [value-field]="'genderId'" [data]="radioGroupData">
+            </amexio-radio-group>
+        </amexio-column>
+        <amexio-column size="6">
+            <amexio-checkbox formControlName="Agree" [field-label]="'Agree'">
+            </amexio-checkbox>
+        </amexio-column>
+    </amexio-row>
+</form>
+<amexio-button [label]="'Save'" [disabled]="!employeeForm.valid" [type]="'green'" [tooltip]="'Save Form'">
+</amexio-button>
+<amexio-text-input 
+[pattern]="'\(\d{3}\)\s\d{3}-\d{4}'"  
+[place-holder]="'(XXX) XXX-XXXX'"  
+[amexio-mask-pattern]="'(XXX) XXX-XXXX'" 
+[field-label]="'Telephone'"
+[(ngModel)]="a"
+ [allow-blank]="true">
+</amexio-text-input>
 <router-outlet></router-outlet>

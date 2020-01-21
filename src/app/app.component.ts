@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup, FormBuilder, FormArray, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,33 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-amexio';
+  // for simple Reactive Form
+  radioGroupData: any[] = [];
+  employeeForm: FormGroup;
 data:any;
+
+constructor(private fb: FormBuilder) {
+  
+  this.radioGroupData = [{
+    genderName: 'Male',
+    genderId: 'male'
+  }, {
+    genderName: 'Female',
+    genderId: 'female'
+  }];
+
+  // Demo1 : - Simple Reactive Form
+
+  this.employeeForm = this.fb.group({
+    FirstName: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(20)]],
+    LastName: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(20)]],
+    Email: ['', [Validators.required, Validators.email]],
+    Age: ['', [Validators.required]],
+    Gender: ['', [Validators.required]],
+    Agree: ['', [Validators.required, Validators.requiredTrue]]
+  });
+}
+
   ngOnInit() {
     this.data = [
       {
