@@ -1,0 +1,181 @@
+<amexio-card [header]="true" [footer]="true" [footer-align]="'right'">
+  <amexio-header>
+    Amexio Reactive Forms
+  </amexio-header>
+  <amexio-body>
+    <form [formGroup]="employeeForm">
+      <amexio-row>
+        <amexio-column size="6">
+          <amexio-text-input formControlName="FirstName" [field-label]="'First Name'" [allow-blank]="true"
+            [error-msg]="'Please enter valid First Name'" [enable-popover]="true"
+            [place-holder]="'Please enter first name'" [min-length]="2" [disabled]="false" [icon-feedback]="false"
+            [min-error-msg]="'Minimum 2 char allowed'" [max-error-msg]="'Maximum 20 char allowed'" [max-length]="20">
+          </amexio-text-input>
+        </amexio-column>
+        <amexio-column size="6">
+          <amexio-text-input formControlName="LastName" [field-label]="'Last Name'"
+            [place-holder]="'Please enter last name'" [allow-blank]="true" [error-msg]="'errorMsg'"
+            [enable-popover]="true" [min-length]="2" [min-error-msg]="'Minimum 2 char allowed'"
+            [max-error-msg]="'Maximum 20 char allowed'" [max-length]="20">
+            [icon-feedback]="true" >
+          </amexio-text-input>
+        </amexio-column>
+      </amexio-row>
+      <amexio-row>
+        <amexio-column size="6">
+          <amexio-email-input formControlName="Email" [field-label]="'Email Id'"
+            [place-holder]="'Please enter Email Id'" [allow-blank]="false" [error-msg]="'Please Enter Email Id'"
+            [enable-popover]="true" [icon-feedback]="true">
+          </amexio-email-input>
+        </amexio-column>
+        <amexio-column size="6">
+          <!-- <amexio-number-input  formControlName="Age" 
+              [enable-popover]="true" [field-label]="'Age'"
+              [place-holder]="'Enter age'"  [error-msg] ="'Please enter age'"
+              [min-value]="18" [min-error-msg]="'age can not be less than 18'"
+              [max-value]="100" [max-error-msg]="'age can not be greater than 100'"
+              [icon-feedback]="true">
+           </amexio-number-input> -->
+          <amexio-text-input [pattern]="'\(\d{3}\)\s\d{3}-\d{4}'" [place-holder]="'(XXX) XXX-XXXX'"
+            [amexio-mask-pattern]="'(XXX) XXX-XXXX'" [field-label]="'Age'" formControlName="Age" [allow-blank]="true">
+          </amexio-text-input>
+        </amexio-column>
+      </amexio-row>
+
+      <amexio-row>
+        <amexio-column size="6">
+          <amexio-radio-group formControlName="Gender" [field-label]="'Gender'" [horizontal]="true"
+            [display-field]="'genderName'" [value-field]="'genderId'" [data]="radioGroupData">
+          </amexio-radio-group>
+        </amexio-column>
+        <amexio-column [size]="3">
+          <amexio-dropdown formControlName="Depart" [place-holder]="'Choose Department'" [allow-blank]="false"
+            [field-label]="'Department'" [search]="'true'" [data]="departmentData" [display-field]="'deptName'"
+            [value-field]="'deptId'">
+          </amexio-dropdown>
+        </amexio-column>
+
+
+        <amexio-column size="3">
+          <amexio-checkbox formControlName="Agree" [field-label]="'Agree'">
+          </amexio-checkbox>
+        </amexio-column>
+      </amexio-row>
+    </form>
+  </amexio-body>
+  <amexio-action>
+    <amexio-button [label]="'Save'" [disabled]="!employeeForm.valid" [type]="'green'" [tooltip]="'Save Form'">
+    </amexio-button>
+  </amexio-action>
+
+</amexio-card>
+
+<amexio-card [header]="true" [footer]="true" [footer-align]="'right'">
+  <amexio-header>
+    Amexio Template Driven
+  </amexio-header>
+  <amexio-body>
+    <amexio-form form-name="validateForm" header="true" show-error="true">
+      <amexio-form-header>
+        Validation Form
+      </amexio-form-header>
+      <amexio-form-body>
+        <amexio-row>
+          <amexio-column [size]="6">
+            <amexio-text-input [min-length]="3" [max-length]="5" [allow-blank]="false" field-label="Firstname"
+              name="name1" place-holder="Enter firstname" icon-feedback="true">
+            </amexio-text-input>
+          </amexio-column>
+          <amexio-column [size]="6">
+            <amexio-text-input enable-popover="true" field-label="Lastname" name="name" place-holder="Enter lastname"
+              allow-blank="false" error-msg="Please enter last name" min-length="3"
+              min-error-msg="Minimum 3 char required" max-length="10" max-error-msg="Maximum 10 char allowed"
+              icon-feedback="true">
+            </amexio-text-input>
+          </amexio-column>
+        </amexio-row>
+
+        <amexio-textarea-input [disabled]="false" [field-label]="'Address'" name="Address"
+          [place-holder]="'Enter address'" [error-msg]="'Please enter address'" [icon-feedback]="true" [rows]="'1'"
+          [columns]="'2'" [allow-blank]="false" [enable-popover]="true"></amexio-textarea-input>
+        <amexio-row>
+          <amexio-column [size]="6">
+            <amexio-radio-group name="name" [field-label]="'Gender'" [horizontal]="true" [allow-blank]="false"
+              [data-reader]="'response.data'" [display-field]="'gender'" [value-field]="'genderId'"
+              [data]="radioGroupData">
+            </amexio-radio-group>
+          </amexio-column>
+          <amexio-column [size]="6">
+            <amexio-checkbox-group [field-label]="'Hobbies'" name="language" [horizontal]="true" [required]="true"
+              [disabled]="false" [data-reader]="'response.data'" [display-field]="'language'" [value-field]="'checked'"
+              [data]="checkboxGroupdata">
+            </amexio-checkbox-group>
+
+          </amexio-column>
+        </amexio-row>
+        <amexio-row>
+          <amexio-column [size]="6">
+            <amexio-tag-input [data-reader]="'data'" [http-url]="'https://api.myjson.com/bins/johrt'"
+              [http-method]="'get'" [key]="'countryName'" [display-field]="'countryName'" [value-field]="'countryName'"
+              [field-label]="'Having visa'">
+            </amexio-tag-input>
+          </amexio-column>
+          <amexio-column [size]="6">
+            <amexio-dropdown [place-holder]="'Choose City'" name="city" [allow-blank]="false" [data-reader]="'data'"
+              [field-label]="'City'" [http-url]="'https://api.myjson.com/bins/lfgyg'" [http-method]="'get'"
+              [search]="'true'" [display-field]="'cityName'" [value-field]="'cityName'">
+            </amexio-dropdown>
+          </amexio-column>
+        </amexio-row>
+        <amexio-row>
+          <amexio-column size="6">
+            <!-- <amexio-number-input [enable-popover]="true" [field-label]="'Age'" [place-holder]="'Enter age'" [allow-blank]="false" [error-msg]="'Please enter age'"
+             [min-value]="1" [min-error-msg]="'age can not be less than 1'" [max-value]="100" [max-error-msg]="'age can not be greater than 100'"
+             [icon-feedback]="true">
+            </amexio-number-input> -->
+            <amexio-text-input [pattern]="'\(\d{3}\)\s\d{3}-\d{4}'" [place-holder]="'(XXX) XXX-XXXX'"
+              [amexio-mask-pattern]="'(XXX) XXX-XXXX'" [field-label]="'Age'" [(ngModel)]="a" [allow-blank]="true">
+            </amexio-text-input>
+
+          </amexio-column>
+          <amexio-column [size]="6">
+            <amexio-date-time-picker [(ngModel)]="currentDate" [field-label]="'Date Of Birth'" [time-picker]="false"
+              [date-picker]="true" [required]="true">
+            </amexio-date-time-picker>
+          </amexio-column>
+        </amexio-row>
+
+        <amexio-row>
+          <amexio-column [size]="6">
+            <amexio-email-input [field-label]="'Email Id'" name="email" [place-holder]="'Enter Email Id'"
+              [allow-blank]="false" [error-msg]="'Please Enter Email Id'" [enable-popover]="true"
+              [icon-feedback]="true">
+            </amexio-email-input>
+          </amexio-column>
+          <amexio-column [size]="6">
+            <amexio-password-input [enable-popover]="true" [field-label]="'Password Input'" name="password"
+              [place-holder]="'Enter Password'" [allow-blank]="false" [error-msg]="'Please enter password'"
+              [min-length]="6" [min-error-msg]="'Minimum 6 char required'" [max-length]="32"
+              [max-error-msg]="'Maximum 32 char allowed'" [icon-feedback]="true">
+            </amexio-password-input>
+          </amexio-column>
+        </amexio-row>
+
+        <amexio-checkbox [field-label]="'Agree'" [required]="true">
+        </amexio-checkbox>
+      </amexio-form-body>
+      <amexio-form-action>
+        <amexio-button [disabled]="false" [label]="'OK'" [type]="'primary'" [tooltip]="'Save'"
+          [form-bind]="'validateForm'">
+        </amexio-button>
+        <amexio-button [label]="'Cancel'" [type]="'theme-backgroundcolor'" [tooltip]="'Cancel'">
+        </amexio-button>
+      </amexio-form-action>
+    </amexio-form>
+  </amexio-body>
+  <amexio-action>
+    <amexio-button [label]="'Save'" [disabled]="!employeeForm.valid" [type]="'green'" [tooltip]="'Save Form'">
+    </amexio-button>
+  </amexio-action>
+
+</amexio-card>

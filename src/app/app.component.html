@@ -23,7 +23,7 @@
 </amexio-row> -->
 
 <!-- Demo1 :- Simple Reactive Form-->
-<form [formGroup]="employeeForm">
+<!-- <form [formGroup]="employeeForm">
     <amexio-row>
         <amexio-column size="6">
             <amexio-text-input formControlName="FirstName" [field-label]="'First Name'" [allow-blank]="true"
@@ -50,9 +50,6 @@
             </amexio-email-input>
         </amexio-column>
         <amexio-column size="6">
-            <!-- <amexio-number-input formControlName="Age" [enable-popover]="true" [field-label]="'Age'" [place-holder]="'Enter age'" [error-msg]="'Please enter age'" [min-value]="18" [min-error-msg]="'age can not be less than 18'" [max-value]="100" [max-error-msg]="'age can not be greater than 100'"
-                [icon-feedback]="true">
-            </amexio-number-input> -->
             <amexio-text-input [pattern]="'\(\d{3}\)\s\d{3}-\d{4}'" [place-holder]="'(XXX) XXX-XXXX'"
                 [amexio-mask-pattern]="'(XXX) XXX-XXXX'" [field-label]="'Age'" formControlName="Age"
                 [allow-blank]="true">
@@ -83,4 +80,7 @@
 [(ngModel)]="a"
  [allow-blank]="true">
 </amexio-text-input>
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
+
+<app-amexio-reactive-forms></app-amexio-reactive-forms>
+<!-- <app-data-grid></app-data-grid> -->
