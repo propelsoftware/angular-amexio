@@ -101,14 +101,12 @@
         <amexio-row>
           <amexio-column [size]="6">
             <amexio-radio-group name="name" [field-label]="'Gender'" [horizontal]="true" [allow-blank]="false"
-              [data-reader]="'response.data'" [display-field]="'gender'" [value-field]="'genderId'"
-              [data]="radioGroupData">
+              [display-field]="'gender'" [value-field]="'genderId'" [data]="radioGroupData">
             </amexio-radio-group>
           </amexio-column>
           <amexio-column [size]="6">
             <amexio-checkbox-group [field-label]="'Hobbies'" name="language" [horizontal]="true" [required]="true"
-              [disabled]="false" [data-reader]="'response.data'" [display-field]="'language'" [value-field]="'checked'"
-              [data]="checkboxGroupdata">
+              [disabled]="false" [display-field]="'language'" [value-field]="'checked'" [data]="checkboxGroupdata">
             </amexio-checkbox-group>
 
           </amexio-column>

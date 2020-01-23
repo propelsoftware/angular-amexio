@@ -56,7 +56,13 @@
 <br>
 <br>
 <amexio-row>
-<app-amexio-reactive-forms></app-amexio-reactive-forms>
+  <amexio-button [label]="'Data Grid'" [type]="'theme-color'" [tooltip]="'My Account'" (onClick)="onClick('navbar-demo/datagrid')">
+  </amexio-button>
+  <amexio-button [label]="'Reactive and Template Form'" [type]="'theme-color'" [tooltip]="'My Account'" (onClick)="onClick('navbar-demo/reactiveform')">
+  </amexio-button>
+  <br>
+  <router-outlet ></router-outlet>
+<!-- <app-amexio-reactive-forms></app-amexio-reactive-forms> -->
 <!-- <app-data-grid></app-data-grid> -->
 <!-- <navbar-demo></navbar-demo> -->
 </amexio-row>
