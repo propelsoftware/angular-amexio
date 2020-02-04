@@ -5,6 +5,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AmexioWidgetModule } from "amexio-ng-extensions"; // Import Amexio library
+import { DeviceDetectorModule } from "ngx-device-detector";
+
 // import { DataGridComponent } from "./data-grid/data-grid.component"
 // import { AmexioReactiveFormsComponent } from "./amexio-reactive-forms/amexio-reactive-forms.component"
 //import { NavbarDemo } from "./navbar/navbar.demo.component"
