@@ -8,11 +8,13 @@ import { CommonModule } from "@angular/common";
 import { NavbarDemo } from "./navbar.demo.component";
 import { DataGridComponent } from "../data-grid/data-grid.component"
 import { AmexioReactiveFormsComponent } from "../amexio-reactive-forms/amexio-reactive-forms.component"
+import { StepwizardDemo } from "../stepwizard/stepwizard.demo";
 
 @NgModule({
   declarations: [NavbarDemo,
     DataGridComponent,
-    AmexioReactiveFormsComponent
+    AmexioReactiveFormsComponent,
+    StepwizardDemo
   ],
   imports: [CommonModule, FormsModule, AmexioWidgetModule, ReactiveFormsModule,
 
@@ -20,6 +22,7 @@ import { AmexioReactiveFormsComponent } from "../amexio-reactive-forms/amexio-re
       {path: '', component: NavbarDemo, pathMatch: 'full'},
       {path: 'datagrid', component: DataGridComponent},
       {path: 'reactiveform', component: AmexioReactiveFormsComponent},
+      {path: 'stepwiard', component: StepwizardDemo},
     ])],
   providers: []
 })

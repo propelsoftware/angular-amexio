@@ -49,4 +49,9 @@ export class AmexioReactiveFormsComponent implements OnInit {
     });
   }
 
+  onClick(data:any){
+    console.log("on click...")
+    console.log(data.data.label)
+
+  }
 }

@@ -21,18 +21,36 @@ export class DataGridComponent implements OnInit {
         "region": "CA",
         "salary": 14000000,
         "phoneNumber": "408-2222222",
-        "emailAddress": "tomhanks@gmail.com"
+        "emailAddress": "tomhanks@gmail.com",
+        "Level1": {
+          "employeeCode1": "L1",
+          "region1": "L1",
+          "Level2": {
+            "employeeCode2": "L2",
+            "region2": "L2",
+            
+          }
+        }
       },
       {
         "userId": "1",
-        "jobTitle": "Team Lead",
+        "jobTitle": "",
         "firstName": "ketan",
         "lastName": "Gote",
         "salary": 22000000,
         "preferredFullName": "Ketan Gote",
         "employeeCode": "E1",
         "phoneNumber": "7687654768",
-        "emailAddress": "ketan.gote.com"
+        "emailAddress": "ketan.gote.com",
+        "Level1": {
+          "employeeCode1": "A1",
+          "region1": "L1",
+          "Level2": {
+            "employeeCode2": "A2",
+            "region2": "L2",
+            
+          }
+        }
       },
       {
         "userId": "10",
@@ -43,7 +61,16 @@ export class DataGridComponent implements OnInit {
         "preferredFullName": "Santosh Gawade",
         "employeeCode": "E1",
         "phoneNumber": "9877654768",
-        "emailAddress": "Santosh.Gawade.com"
+        "emailAddress": "Santosh.Gawade.com",
+        "Level1": {
+          "employeeCode1": "L12",
+          "region1": "L1",
+          "Level2": {
+            "employeeCode2": "L2",
+            "region2": "L2",
+            
+          }
+        }
       },
       {
         "userId": "2",
@@ -54,7 +81,16 @@ export class DataGridComponent implements OnInit {
         "preferredFullName": "Dattaram Gawas",
         "employeeCode": "E2",
         "phoneNumber": "9637167645",
-        "emailAddress": "dattaram.gawas.com"
+        "emailAddress": "dattaram.gawas.com",
+        "Level1": {
+          "employeeCode1": "L1",
+          "region1": "L1",
+          "Level2": {
+            "employeeCode2": "L2",
+            "region2": "L2",
+            
+          }
+        }
       },
       {
         "userId": "3",
@@ -65,7 +101,16 @@ export class DataGridComponent implements OnInit {
         "employeeCode": "E3",
         "salary": 1500000,
         "phoneNumber": "8851855577",
-        "emailAddress": "vrushabh.kelwalkar.com"
+        "emailAddress": "vrushabh.kelwalkar.com",
+        "Level1": {
+          "employeeCode1": "L1",
+          "region1": "L1",
+          "Level2": {
+            "employeeCode2": "L2",
+            "region2": "L2",
+            
+          }
+        }
       },
       {
         "userId": "4",
@@ -76,7 +121,16 @@ export class DataGridComponent implements OnInit {
         "preferredFullName": "Sagar Jadhav",
         "employeeCode": "E4",
         "phoneNumber": "8888688444",
-        "emailAddress": "sagar.jadhav.com"
+        "emailAddress": "sagar.jadhav.com",
+        "Level1": {
+          "employeeCode1": "L1",
+          "region1": "L1",
+          "Level2": {
+            "employeeCode2": "L2",
+            "region2": "L2",
+            
+          }
+        }
       },
       {
         "userId": "5",
@@ -87,7 +141,16 @@ export class DataGridComponent implements OnInit {
         "preferredFullName": "Sharad Jadhav",
         "employeeCode": "E5",
         "phoneNumber": "8888648444",
-        "emailAddress": "Sharad.jadhav.com"
+        "emailAddress": "Sharad.jadhav.com",
+        "Level1": {
+          "employeeCode1": "L1",
+          "region1": "L1",
+          "Level2": {
+            "employeeCode2": "L2",
+            "region2": "L2",
+            
+          }
+        }
       },
       {
         "userId": "6",
@@ -98,7 +161,16 @@ export class DataGridComponent implements OnInit {
         "preferredFullName": "Samadhan Pardeshi",
         "employeeCode": "E6",
         "phoneNumber": "8888648444",
-        "emailAddress": "Samadhan.Pardeshi.com"
+        "emailAddress": "Samadhan.Pardeshi.com",
+        "Level1": {
+          "employeeCode1": "L1",
+          "region1": "L1",
+          "Level2": {
+            "employeeCode2": "L2",
+            "region2": "L2",
+            
+          }
+        }
       },
       {
         "userId": "7",
@@ -109,7 +181,16 @@ export class DataGridComponent implements OnInit {
         "preferredFullName": "puja Patil",
         "employeeCode": "E6",
         "phoneNumber": "8888348444",
-        "emailAddress": "puja.Patil.com"
+        "emailAddress": "puja.Patil.com",
+        "Level1": {
+          "employeeCode1": "L1",
+          "region1": "L1",
+          "Level2": {
+            "employeeCode2": "L2",
+            "region2": "L2",
+            
+          }
+        }
       },
       {
         "userId": "8",
@@ -120,7 +201,16 @@ export class DataGridComponent implements OnInit {
         "preferredFullName": "suraj Patil",
         "employeeCode": "E6",
         "phoneNumber": "8888548444",
-        "emailAddress": "suraj.Patil.com"
+        "emailAddress": "suraj.Patil.com",
+        "Level1": {
+          "employeeCode1": "L1",
+          "region1": "L1",
+          "Level2": {
+            "employeeCode2": "L2",
+            "region2": "L2",
+            
+          }
+        }
       },
       {
         "userId": "9",
@@ -131,7 +221,16 @@ export class DataGridComponent implements OnInit {
         "preferredFullName": "sandip Patil",
         "employeeCode": "E6",
         "phoneNumber": "8888548444",
-        "emailAddress": "sandip.Patil.com"
+        "emailAddress": "sandip.Patil.com",
+        "Level1": {
+          "employeeCode1": "L1",
+          "region1": "L1",
+          "Level2": {
+            "employeeCode2": "L2",
+            "region2": "L2",
+            
+          }
+        }
       },
       {
         "userId": "10",
@@ -142,7 +241,16 @@ export class DataGridComponent implements OnInit {
         "preferredFullName": "satish Patil",
         "employeeCode": "E6",
         "phoneNumber": "8888548444",
-        "emailAddress": "satish.Patil.com"
+        "emailAddress": "satish.Patil.com",
+        "Level1": {
+          "employeeCode1": "L1",
+          "region1": "L1",
+          "Level2": {
+            "employeeCode2": "L2",
+            "region2": "L2",
+            
+          }
+        }
       },
       {
         "userId": "11",
@@ -153,7 +261,16 @@ export class DataGridComponent implements OnInit {
         "preferredFullName": "satish Patil",
         "employeeCode": "E6",
         "phoneNumber": "8888548444",
-        "emailAddress": "satish.Patil.com"
+        "emailAddress": "satish.Patil.com",
+        "Level1": {
+          "employeeCode1": "L1",
+          "region1": "L1",
+          "Level2": {
+            "employeeCode2": "L2",
+            "region2": "L2",
+            
+          }
+        }
       },
       {
         "userId": "12",
@@ -164,7 +281,16 @@ export class DataGridComponent implements OnInit {
         "preferredFullName": "Sudhir Patil",
         "employeeCode": "E6",
         "phoneNumber": "8888548444",
-        "emailAddress": "Sudhir.Patil.com"
+        "emailAddress": "Sudhir.Patil.com",
+        "Level1": {
+          "employeeCode1": "L1",
+          "region1": "L1",
+          "Level2": {
+            "employeeCode2": "L2",
+            "region2": "L2",
+            
+          }
+        }
       },
       {
         "userId": "13",
@@ -175,7 +301,16 @@ export class DataGridComponent implements OnInit {
         "preferredFullName": "Satish Sawant",
         "employeeCode": "E13",
         "phoneNumber": "8888548444",
-        "emailAddress": "Satish.Sawant.com"
+        "emailAddress": "Satish.Sawant.com",
+        "Level1": {
+          "employeeCode1": "L1",
+          "region1": "L1",
+          "Level2": {
+            "employeeCode2": "L2",
+            "region2": "L2",
+            
+          }
+        }
       },
       {
         "userId": "14",
@@ -186,7 +321,16 @@ export class DataGridComponent implements OnInit {
         "preferredFullName": "Ajit Sawant",
         "employeeCode": "E14",
         "phoneNumber": "8888548444",
-        "emailAddress": "Ajit.Sawant.com"
+        "emailAddress": "Ajit.Sawant.com",
+        "Level1": {
+          "employeeCode1": "L1",
+          "region1": "L1",
+          "Level2": {
+            "employeeCode2": "L2",
+            "region2": "L2",
+            
+          }
+        }
       }
     ];
   }
