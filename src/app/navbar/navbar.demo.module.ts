@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
-import { AmexioWidgetModule } from "amexio-ng-extensions";
+import { AmexioWidgetModule,AmexioEnterpriseModule } from "amexio-ng-extensions";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 //import {FormsModule} from "@angular/forms";
@@ -16,7 +16,7 @@ import { StepwizardDemo } from "../stepwizard/stepwizard.demo";
     AmexioReactiveFormsComponent,
     StepwizardDemo
   ],
-  imports: [CommonModule, FormsModule, AmexioWidgetModule, ReactiveFormsModule,
+  imports: [CommonModule, FormsModule, AmexioWidgetModule, ReactiveFormsModule,AmexioEnterpriseModule,
 
     RouterModule.forChild([
       {path: '', component: NavbarDemo, pathMatch: 'full'},

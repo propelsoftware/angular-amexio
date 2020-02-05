@@ -25,7 +25,7 @@ export class StepwizardDemo {
   }
 
   finalStageClick(event:any) {
-
+console.log("test final stage click");
   }
 }
 
